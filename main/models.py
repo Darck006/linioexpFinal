@@ -9,7 +9,7 @@ class Proveedor(models.Model):
 class Categoria(models.Model):
     codigo = models.CharField(max_length=4)
     nombre = models.CharField(max_length=50)
-
+    
 class Localizacion(models.Model):
   distrito = models.CharField(max_length=20)
   provincia = models.CharField(max_length=20)

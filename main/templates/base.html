@@ -4,7 +4,9 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1"> <!-- Ensures optimal rendering on mobile devices. -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.1/css/bulma.min.css">
-    <title> LinioExp </title>
+    {% load static %}
+    <link rel="icon" href="{% static 'favicon.ico' %}">
+    <title> Linio </title>
   </head>
   <body>
   <section class="section">
@@ -15,7 +17,6 @@
         <form action="{% url 'product-list' %}" method="get">
             <input class="input is-rounded" type="text" name="q" placeholder="Busca tu producto...">
         </form>
-    </div>
          {% block content %}
          {% endblock %}
     </div>

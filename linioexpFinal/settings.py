@@ -140,3 +140,5 @@ DROPBOX_OAUTH2_TOKEN = '9nEMdfa-QGEAAAAAAAAAASv_fEfFtZ0p22jAELqS4ZTWHLTC833_QACh
 # Django Heroku
 import django_heroku
 django_heroku.settings(locals())
+
+STATICFILES_DIRS = [os.path.join(BASE_DIR,'static')]

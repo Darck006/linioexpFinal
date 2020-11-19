@@ -23,6 +23,8 @@ class HomePageView(TemplateView):
 
 class ProductListView(ListView):
     model = Producto
+    template_name = "main/producto_list.html"
+    categorias = Categoria.objects.all() 
 
     def get_queryset(self):
         query = self.request.GET.get('q')
@@ -31,6 +33,13 @@ class ProductListView(ListView):
            return object_list
         else:
            return Producto.objects.all()
+
+def product_list_view(request):
+    categorias = Categoria.objects.all()
+    productos = Producto.objects.all()
+
+    return render(request,"main/producto_list.html",{'categorias':categorias,'productos':productos})
+
 
 class ProductDetailView(DetailView):
     model = Producto
