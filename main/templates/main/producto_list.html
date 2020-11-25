@@ -1,18 +1,25 @@
 {% extends "base.html" %}
 
+{% load static %}
+
+{% block javascript %}
+    <script type="text/javascript" src="{% static 'js/search.js' %}"></script>
+{% endblock %}
+
 {% block content %}
 <br>
-<ul>
+<ul class="padre">
 {% for categoria in categorias %}
 <li>  
-<a href='#'>
-      {{categoria.nombre}}
-</a>
+    <a class="hijo">
+        {{categoria.nombre}}
+    </a>
 </li>
 {% endfor %}    
 </ul>
 <h3> Productos </h3>
-    <div class="columns is-multiline">
+    <div id="searchContent" class="columns is-multiline">
+        
       {% for producto in productos %}
           <div class="column is-4">
               <div class="card">
@@ -27,6 +34,9 @@
                           </a>
                       </h6>
                       <p>$ {{ producto.precio }}</p>
+
+                      <input type="text" class="nameProduct" value="{{ producto.nombre }} _|_ {{ producto.precio }} _|_ {% url 'product-detail' producto.pk %} _|_ {{ producto.categoria.nombre }}">
+
                   </div>
               </div>
           </div>
