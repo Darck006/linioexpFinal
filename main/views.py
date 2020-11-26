@@ -37,7 +37,6 @@ class ProductListView(ListView):
 def product_list_view(request):
     categorias = Categoria.objects.all()
     productos = Producto.objects.all()
-
     return render(request,"main/producto_list.html",{'categorias':categorias,'productos':productos})
 
 

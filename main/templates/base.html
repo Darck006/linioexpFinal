@@ -18,7 +18,7 @@
        <hr>
        <div class="content">
         <form action="{% url 'product-list' %}" method="get">
-            <input class="input is-rounded" type="text" name="q" placeholder="Busca tu producto...">
+            <input class="input is-rounded" id="inputsearch" type="text" name="q" placeholder="Busca tu producto...">
         </form>
          {% block content %}
          {% endblock %}
