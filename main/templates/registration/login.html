@@ -6,6 +6,7 @@
 <p>Your username and password didn't match. Please try again.</p>
 {% endif %}
 
+<h3>Ingresa a tu cuenta</h3>
 <form method="post" action="{% url 'login' %}">
 {% csrf_token %}
 <table>
@@ -19,7 +20,7 @@
 </tr>
 </table>
 
-<input type="submit" value="login">
+<input type="submit" value="Continuar">
 <input type="hidden" name="next" value="{% url 'home'%}">
 </form>
 <hr>

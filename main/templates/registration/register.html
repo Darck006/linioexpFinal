@@ -2,10 +2,12 @@
 
 {% block content %}
 
+<h3>Crea tu cuenta aquí</h3>
+<br>
 <form method="post">
     {% csrf_token %}
     {{ form.as_p }}
-    <input type="submit" value="Registrate">
+    <input type="submit" value="Regístrate">
 </form>
 
 {% endblock %}
