@@ -1,6 +1,8 @@
 {% extends "base.html" %}
 
 {% block content %}
+
+{% include "barra_busqueda.html" %}
     <h3> {{ object.nombre }} </h3>
     <div class="columns">
     {% for image in object.images.all %}
@@ -33,7 +35,7 @@
     </div>
     <hr>
     <ul>
-      <li><a href="{% url 'product-list' %}">Ver Lista de Productos</a></li>
-      <li><a href="{% url 'home' %}">Inicio</a></li>
+      <li><a href="{% url 'product-list' %}">Ver Lista de Productos Completa</a></li>
+      <li><a href="{% url 'home' %}">Volver al Inicio</a></li>
     </ul>
 {% endblock %}

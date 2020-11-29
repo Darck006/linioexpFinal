@@ -12,14 +12,13 @@
     <title> Linio </title>
   </head>
   <body>
-  <section class="section">
+  <section class="section" style="padding: 1.mm;">
     <div class="container">
-       <h1 class="title is-1"> Linio Express </h1>
+      <div style="text-align:center; margin: auto; background-color: lightgray">
+       <img src="{% static 'Linio-LogoOficial.png' %}" width="300" alt="Linioexp">
+      </div> 
        <hr>
        <div class="content">
-        <form action="{% url 'product-list' %}" method="get">
-            <input class="input is-rounded" id="inputsearch" type="text" name="q" placeholder="Busca tu producto...">
-        </form>
          {% block content %}
          {% endblock %}
     </div>

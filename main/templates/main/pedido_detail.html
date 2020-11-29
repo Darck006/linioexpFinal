@@ -31,13 +31,12 @@
         </div>
     </div>
     <a href="{% url 'pedido-update' pk=object.pk %}" class='button is-info'>
-      Checkout
+      Opciones de Envío
     </a>
     <hr>
     <div class="content">
         <ul>
-          <li><a href="{% url 'product-list' %}">Ver Lista de Productos</a></li>
-          <li><a href="{% url 'home' %}">Inicio</a></li>
+          <li><a href="{% url 'home' %}">Quiero seguir comprando</a></li>
         </ul>
     </div>
 {% endblock %}
